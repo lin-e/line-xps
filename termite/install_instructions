@@ -1,0 +1,20 @@
+<DEPS>
+$ sudo apt install -y g++ libgtk-3-dev gtk-doc-tools gnutls-bin valac intltool libpcre2-dev libglib3.0-cil-dev libgnutls28-dev libgirepository1.0-dev libxml2-utils gperf build-essential
+
+<VTE-NG>
+$ git clone https://github.com/thestinger/vte-ng.git
+$ echo export LIBRARY_PATH="/usr/include/gtk-3.0:$LIBRARY_PATH"
+$ cd vte-ng && ./autogen.sh && make && sudo make install
+$ cd ..
+
+<TERMITE>
+$ git clone --recursive https://github.com/thestinger/termite.git
+$ cd termite && make && sudo make install
+
+<SETUP?>
+$ sudo ldconfig
+$ sudo mkdir -p /lib/terminfo/x
+$ sudo ln -s /usr/local/share/terminfo/x/xterm-termite /lib/terminfo/x/xterm-termite
+
+"struct `Test.App.Options' cannot be empty":
+https://github.com/GNOME/vte/commit/53690d5cee51bdb7c3f7680d3c22b316b1086f2c#diff-09af37e3a14d365cf086df3ead32aa7f

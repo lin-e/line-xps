@@ -1,5 +1,5 @@
 set $mod Mod1
-set $term urxvt
+set $term termite
 
 floating_modifier $mod
 
