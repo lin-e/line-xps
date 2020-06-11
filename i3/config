@@ -24,6 +24,7 @@ exec_always compton --config ~/etc/compton/config &
 # background
 exec feh --no-fehbg --bg-fill ~/etc/static/img/bg.jpg &
 
+bindsym --release Print exec "scrot ~/usr/img/screenshots/$(date +%s).png -s -e 'xclip -selection c -t image/png < $f'"
 
 # workspace names
 set $ws1 "1 main"
