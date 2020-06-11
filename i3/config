@@ -10,7 +10,7 @@ exec_always --no-startup-id ~/etc/polybar/launch.sh
 
 # quick launch
 bindsym $mod+Return exec $term
-bindsym $mod+d exec "rofi -modi window,drun -show drun -show-icons -sidebar-mode -theme ~/etc/rofi/solarized.rasi -bw 0"
+bindsym $mod+d exec "rofi -modi window,drun -show drun -show-icons -sidebar-mode -theme ~/etc/rofi/custom.rasi -bw 0"
 bindsym $mod+b exec blueman-manager
 
 # gaps config
