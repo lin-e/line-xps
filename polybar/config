@@ -1,0 +1,143 @@
+[colors]
+transparent = #00000000
+background = #131B26
+foreground = #F3F4F5
+inactive-text = #818D92
+accent = #0099FF
+alert = #0066CC
+
+[bar/master]
+monitor = ${env:MONITOR}
+width = 100%
+height = 24
+background = ${colors.background}
+foreground = ${colors.foreground}
+font-0 = "Roboto:pixelsize=12:antialias=true;1"
+font-1 = "FontAwesome:pixelsize=12:antialias=true;1"
+
+[bar/top]
+inherit = bar/master
+modules-left = i3 title
+# modules-right = spotify spotify-previous spotify-playpause spotify-next battery memory cpu volume date time
+modules-right = battery volume date time
+
+border-top-size = 0
+border-left-size = 0
+border-right-size = 0
+
+module-margin-left = 0
+module-margin-right = 0
+padding-left = 0
+padding-right = 0
+
+[module/i3]
+type = internal/i3
+enable-click = true
+enable-scroll = true
+strip-wsnumbers = true
+pin-workspaces = true
+
+format-background = ${colors.background}
+
+label-visible-background = ${colors.background}
+label-visible-foreground = ${colors.inactive-text}
+label-visible-padding = 2
+
+label-focused-background = ${colors.background}
+label-focused-foreground = ${colors.foreground}
+label-focused-padding = 2
+
+label-unfocused-background = ${colors.background}
+label-unfocused-foreground = ${colors.inactive-text}
+label-unfocused-padding = 2
+
+label-urgent-background = ${colors.alert}
+label-urgent-foreground = ${colors.foreground}
+label-urgent-padding = 2
+
+[module/time]
+type = internal/date
+interval = 40
+label = %time%
+time = %H:%M
+format-padding = 2
+format-background = ${colors.accent}
+
+[module/date]
+type = internal/date
+interval = 1200
+label = %date%
+date = %A, %d %B
+format-padding = 2
+format-background = ${colors.background}
+
+[module/volume]
+type = internal/pulseaudio
+label-volume = vol %percentage%%
+label-muted = vol [x]
+enable-click = false
+format-volume-padding = 2
+format-muted-padding = 2
+format-volume-background = ${colors.accent}
+format-volume-foreground = ${colors.foreground}
+format-muted-background = ${colors.accent}
+format-muted-foreground = ${colors.foreground}
+format-volume-margin = 0
+use-ui-max = false
+
+[module/cpu]
+type = internal/cpu
+label = cpu %percentage%%
+format-padding = 2
+format-background = ${colors.accent}
+format-foreground = ${colors.foreground}
+format-margin = 0
+
+[module/memory]
+type = internal/memory
+label = ram %gb_used%
+format-padding = 2
+format-background = ${colors.accent}
+format-foreground = ${colors.foreground}
+format-margin = 0
+
+[module/spotify]
+type = custom/script
+interval = 2
+exec = ~/.config/polybar/scripts/spotify.sh
+format-padding = 2
+format-background = ${colors.background}
+
+[module/spotify-playpause]
+type = custom/script
+interval = 0
+exec = ~/.config/polybar/scripts/spotify-playpause.sh
+click-left = playerctl play-pause
+format-padding = 2
+format-background = ${colors.accent}
+
+[module/spotify-previous]
+type = custom/script
+exec = echo ""
+click-left = playerctl previous
+format-padding = 2
+format-background = ${colors.accent}
+
+[module/spotify-next]
+type = custom/script
+exec = echo ""
+click-left = playerctl next
+format-padding = 2
+format-background = ${colors.accent}
+
+[module/battery]
+type = custom/script
+exec = python3 ~/etc/polybar/scripts/battery.py
+format-padding = 2
+format-background = ${colors.accent}
+
+[module/title]
+type = internal/xwindow
+format-padding = 2
+format-margin = 2
+format-background = ${colors.background}
