@@ -1,6 +1,9 @@
 " pathogen
 execute pathogen#infect('plugins/{}')
 
+filetype plugin indent on
+syntax on
+
 " powerline for vim
 if filereadable(expand("~/etc/vim/.vimplug"))
     source ~/etc/vim/.vimplug

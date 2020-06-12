@@ -2,6 +2,7 @@ export ZSH="/home/line/.oh-my-zsh"
 
 ZSH_THEME="agnoster-line"
 DISABLE_AUTO_UPDATE="true"
+TERM="xterm-256color"
 
 plugins=(
   git
