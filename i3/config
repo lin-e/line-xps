@@ -1,11 +1,15 @@
 set $mod Mod1
+set $sup Mod4
 set $term termite
+set $bg ~/etc/static/img/bg.png
 
 floating_modifier $mod
 
 # keyboard mappings
 exec --no-startup-id setxkbmap -option ctrl:nocaps # ctrlcaps
 exec --no-startup-id xcape -e 'Shift_R=Shift_L|0;Shift_L=Shift_L|9' -t 300 # space cadet shift
+
+# polybar
 exec_always --no-startup-id ~/etc/polybar/launch.sh
 
 # quick launch
@@ -22,9 +26,19 @@ gaps outer 0
 exec_always compton --config ~/etc/compton/config &
 
 # background
-exec feh --no-fehbg --bg-fill ~/etc/static/img/bg.jpg &
+exec feh --no-fehbg --bg-fill $bg $bg &
+
+# imagine not having to use keybindings to do basic keyboard actions
 
 bindsym --release Print exec "scrot ~/usr/img/screenshots/$(date +%s).png -s -e 'xclip -selection c -t image/png < $f'"
+
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +2%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -2%
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
 
 # workspace names
 set $ws1 "1 main"

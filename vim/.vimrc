@@ -1,5 +1,5 @@
 " pathogen
-execute pathogen#infect('plugins/{}')
+execute pathogen#infect()
 
 filetype plugin indent on
 syntax on

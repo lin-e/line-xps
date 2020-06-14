@@ -1,6 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/line/wacc_examples/valid'
-let g:netrw_dirhist_2='/home/line/weee/valid/scope'
-let g:netrw_dirhist_3='/home/line/bin'
-let g:netrw_dirhist_4='/home/line/usr/doc/ic/revision/ignored/rm.py'
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/line/etc/i3'

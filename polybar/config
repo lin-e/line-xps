@@ -18,7 +18,6 @@ font-1 = "FontAwesome:pixelsize=12:antialias=true;1"
 [bar/top]
 inherit = bar/master
 modules-left = i3 title
-# modules-right = spotify spotify-previous spotify-playpause spotify-next battery memory cpu volume date time
 modules-right = battery volume date time
 
 border-top-size = 0
@@ -84,22 +83,6 @@ format-muted-background = ${colors.accent}
 format-muted-foreground = ${colors.foreground}
 format-volume-margin = 0
 use-ui-max = false
-
-[module/cpu]
-type = internal/cpu
-label = cpu %percentage%%
-format-padding = 2
-format-background = ${colors.accent}
-format-foreground = ${colors.foreground}
-format-margin = 0
-
-[module/memory]
-type = internal/memory
-label = ram %gb_used%
-format-padding = 2
-format-background = ${colors.accent}
-format-foreground = ${colors.foreground}
-format-margin = 0
 
 [module/spotify]
 type = custom/script
