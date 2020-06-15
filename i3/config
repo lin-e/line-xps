@@ -14,7 +14,7 @@ exec_always --no-startup-id ~/etc/polybar/launch.sh
 
 # quick launch
 bindsym $mod+Return exec $term
-bindsym $mod+d exec "rofi -modi window,drun -show drun -show-icons -sidebar-mode -theme ~/etc/rofi/custom.rasi -bw 0"
+bindsym $mod+d exec "rofi -modi window,drun,ssh -show drun -show-icons -sidebar-mode -terminal termite -theme ~/etc/rofi/custom.rasi -bw 0"
 bindsym $mod+b exec blueman-manager
 
 # gaps config
@@ -38,7 +38,6 @@ bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-
 
 # workspace names
 set $ws1 "1 main"
