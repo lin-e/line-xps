@@ -24,8 +24,9 @@ source $ZSH/oh-my-zsh.sh
 source /etc/zsh_command_not_found
 
 eval $(thefuck --alias)
-if [ -f ~/etc/.aliases ]; then
-    . ~/etc/.aliases
+
+if [ -f ~/etc/zsh/.aliases ]; then
+    . ~/etc/zsh/.aliases
 fi
 
 if [[ -r /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
