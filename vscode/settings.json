@@ -46,7 +46,7 @@
     "explorer.confirmDelete": false,
     "editor.minimap.side": "left",
     "window.zoomLevel": 0,
-    "terminal.integrated.fontFamily": "RobotoMono Nerd Font",
+    "terminal.integrated.fontFamily": "RobotoMono Nerd Font Mono",
     "pasteImage.prefix": "\\begin{figure}[h!]\\includegraphics[width=\\linewidth]{",
     "pasteImage.suffix": "}\\end{figure}",
     "window.titleBarStyle": "native",
