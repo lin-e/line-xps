@@ -4,7 +4,7 @@ alt + Return
 
 # open rofi (launcher)
 alt + d
-	rofi -modi window,drun,ssh -show drun -show-icons -sidebar-mode ~/etc/rofi/custom.rasi -bw 0
+	rofi -modi window,drun,ssh -show drun -show-icons -sidebar-mode -theme ~/etc/rofi/custom.rasi -bw 0
 
 # closing (+ shift to kill)
 alt + {_,shift + }q
