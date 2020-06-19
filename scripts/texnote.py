@@ -13,7 +13,7 @@ def custom_strftime(format, t):
 directory = sys.argv[1]
 
 cwd = os.path.dirname(os.path.realpath(__file__))
-template = open(cwd + "/../ic/template.tex", "r").read()
+template = open(cwd + "/../static/ic/template.tex", "r").read()
 
 ts = datetime.today().strftime('%Y%m%d')
 module = os.path.basename(directory)
