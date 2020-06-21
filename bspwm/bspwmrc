@@ -3,6 +3,7 @@
 BACKGROUND=~/etc/static/img/bg.png
 
 sxhkd &
+xsetroot -cursor_name left_ptr &
 setxkbmap -option ctrl:nocaps # caps -> ctrl
 xcape -e 'Shift_R=Shift_L|0;Shift_L=Shift_L|9' -t 300 # space cadet shift
 
@@ -12,13 +13,13 @@ bspc monitor -d 1 2 3 4 5 6 7 8 9 10 11 12
 compton --config ~/etc/compton/config &
 feh --no-fehbg --bg-fill $BACKGROUND --bg-fill $BACKGROUND &
 
-bspc config border_width         1
-bspc config window_gap          5
+bspc config border_width               1
+bspc config window_gap                 6
 
-bspc config split_ratio          0.5
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
+bspc config split_ratio                0.5
+bspc config borderless_monocle         true
+bspc config gapless_monocle            true
 
-bspc config focus_follows_pointer true
+bspc config focus_follows_pointer      true
 
-bspc config presel_feedback_color \#FFFFFF
+bspc config presel_feedback_color      \#0099FF
