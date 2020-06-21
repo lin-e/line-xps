@@ -1,3 +1,4 @@
 ic/template.*
 !ic/template.tex
 scripts/local/*
+*.swp

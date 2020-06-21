@@ -17,7 +17,7 @@ font-1 = "FontAwesome:pixelsize=12:antialias=true;1"
 
 [bar/top]
 inherit = bar/master
-modules-left = bspwm title
+modules-left = i3 title
 modules-right = battery volume date time
 
 border-top-size = 0
@@ -29,27 +29,30 @@ module-margin-right = 0
 padding-left = 0
 padding-right = 0
 
-[module/bspwm]
-type = internal/bspwm
-pin-workspaces = true
+[module/i3]
+type = internal/i3
 enable-click = true
 enable-scroll = true
+strip-wsnumbers = true
+pin-workspaces = true
 
-label-empty = ""
+format-background = ${colors.background}
+
+label-visible-background = ${colors.background}
+label-visible-foreground = ${colors.inactive-text}
+label-visible-padding = 2
 
 label-focused-background = ${colors.background}
 label-focused-foreground = ${colors.foreground}
 label-focused-padding = 2
 
+label-unfocused-background = ${colors.background}
+label-unfocused-foreground = ${colors.inactive-text}
+label-unfocused-padding = 2
+
 label-urgent-background = ${colors.alert}
 label-urgent-foreground = ${colors.foreground}
 label-urgent-padding = 2
-
-label-occupied-background = ${colors.background}
-label-occupied-foreground = ${colors.inactive-text}
-label-occupied-padding = 2
-
-format = <label-state> <label-mode>
 
 [module/time]
 type = internal/date
@@ -80,6 +83,35 @@ format-muted-background = ${colors.accent}
 format-muted-foreground = ${colors.foreground}
 format-volume-margin = 0
 use-ui-max = false
+
+[module/spotify]
+type = custom/script
+interval = 2
+exec = ~/.config/polybar/scripts/spotify.sh
+format-padding = 2
+format-background = ${colors.background}
+
+[module/spotify-playpause]
+type = custom/script
+interval = 0
+exec = ~/.config/polybar/scripts/spotify-playpause.sh
+click-left = playerctl play-pause
+format-padding = 2
+format-background = ${colors.accent}
+
+[module/spotify-previous]
+type = custom/script
+exec = echo ""
+click-left = playerctl previous
+format-padding = 2
+format-background = ${colors.accent}
+
+[module/spotify-next]
+type = custom/script
+exec = echo ""
+click-left = playerctl next
+format-padding = 2
+format-background = ${colors.accent}
 
 [module/battery]
 type = custom/script
