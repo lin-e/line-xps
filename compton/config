@@ -1,1 +1,1 @@
-opacity-rule = [ "40:class_g = 'Bspwm' && class_i = 'presel_feedback'" ];
+opacity-rule = [ "10:class_g = 'Bspwm' && class_i = 'presel_feedback'" ];
