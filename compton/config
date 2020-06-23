@@ -1,1 +1,6 @@
 opacity-rule = [ "10:class_g = 'Bspwm' && class_i = 'presel_feedback'" ];
+blur-background = true;
+blur-method = "kawase";
+blur-strength = 7;
+backend = "glx";
+detect-client-opacity = true;
