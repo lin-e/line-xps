@@ -27,3 +27,5 @@ set number
 set cursorline
 set wildmenu
 set showmatch
+
+set mouse=a

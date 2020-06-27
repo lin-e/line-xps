@@ -66,12 +66,8 @@ ctrl + alt + shift + {i,j,k,l}
 	bspc node -z {top 0 5,left 5 0,bottom 0 -5,right -5 0}
 
 # preselect the direction
-super + alt + {i,j,k,l}
-	bspc node -p {north,west,south,east}
-
-# cancel the preselection for the focused node
-super + alt + space
-	bspc node -p cancel
+super + alt + {i,Up,j,Left,k,Down,l,Right}
+	bspc node -p \~{north,north,west,west,south,south,east,east}
 
 # quit/restart bspwm
 super + alt + {q,r}
@@ -88,6 +84,3 @@ alt + shift + space
 # toggle fullscreen
 alt + f
 	bspc node -t \~fullscreen
-# move a floating window
-super + {Left,Down,Up,Right}
-	bspc node -v {-20 0,0 20,0 -20,20 0}
