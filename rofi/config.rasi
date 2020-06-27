@@ -1,0 +1,9 @@
+configuration {
+	modi: "window,drun,ssh";
+	show-icons: true;
+	terminal: "termite";
+	ssh-command: "{terminal} -e \"{ssh-client} {host} [-p {port}]\"";
+	sidebar-mode: true;
+	theme: "~/etc/rofi/custom.rasi";
+	bw: 0;
+}

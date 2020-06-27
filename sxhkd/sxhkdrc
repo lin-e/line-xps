@@ -4,7 +4,7 @@ alt + Return
 
 # open rofi (launcher)
 alt + d
-	rofi -modi window,drun,ssh -show drun -show-icons -sidebar-mode -theme ~/etc/rofi/custom.rasi -bw 0
+	rofi -show drun -config ~/etc/rofi/config.rasi
 
 # closing (+ shift to kill)
 alt + {_,shift + }q
@@ -14,8 +14,9 @@ alt + {_,shift + }q
 alt + m
 	bspc desktop -l next
 
+# open bluetooth manager
 alt + b
-	blueman
+	blueman-manager
 
 # media controls
 XF86AudioRaiseVolume
@@ -58,11 +59,11 @@ alt + g
 
 # expand a window by moving one of its side outward
 ctrl + alt + {i,j,k,l}
-	bspc node -z {top 0 -20,left -20 0,bottom 0 20,right 20 0}
+	bspc node -z {top 0 -5,left -5 0,bottom 0 5,right 5 0}
 
 # contract a window by moving one of its side inward
 ctrl + alt + shift + {i,j,k,l}
-	bspc node -z {top 0 20,left 20 0,bottom 0 -20,right -20 0}
+	bspc node -z {top 0 5,left 5 0,bottom 0 -5,right -5 0}
 
 # preselect the direction
 super + alt + {i,j,k,l}
