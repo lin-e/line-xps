@@ -2,3 +2,4 @@ ic/template.*
 !ic/template.tex
 scripts/local/*
 *.swp
+vim/.netrwhist
