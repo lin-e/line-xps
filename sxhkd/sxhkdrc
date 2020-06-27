@@ -39,7 +39,7 @@ XF86AudioPrev
 
 # screenshot
 Print
-	scrot ~/usr/img/screenshots/$(date +%s).png -s -e 'xclip -selection c -t image/png < $f'
+	MAIMPATH="$HOME/usr/img/screenshots/$(date +%s).png"; maim $MAIMPATH -s -u; xclip -selection clipboard -t image/png < $MAIMPATH
 
 # make sxhkd reload its configuration files:
 alt + Escape
