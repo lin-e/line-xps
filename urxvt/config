@@ -21,7 +21,7 @@ URxvt.color13: #6c71c4
 URxvt.color14: #93a1a1
 URxvt.color15: #fdf6e3
 URxvt.iso14755: false
-URxvt.perl-ext-common: default
+URxvt.perl-ext-common: default,vtwheel
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 URxvt.keysym.Control-Meta-c: builtin-string:
