@@ -37,6 +37,13 @@ XF86AudioNext
 XF86AudioPrev
 	playerctl previous
 
+# brightness controls
+XF86MonBrightnessUp
+	light -A 5
+
+XF86MonBrightnessDown
+	light -U 5
+
 # screenshot
 Print
 	MAIMPATH="$HOME/usr/img/screenshots/$(date +%s).png"; maim $MAIMPATH -s -u; xclip -selection clipboard -t image/png < $MAIMPATH
