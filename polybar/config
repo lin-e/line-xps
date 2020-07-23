@@ -31,33 +31,36 @@ padding-right = 0
 
 [module/bspwm]
 type = internal/bspwm
+
 pin-workspaces = true
 enable-click = true
 enable-scroll = true
 
 label-empty = ""
 
+label-focused-padding = 2
 label-focused-background = ${colors.background}
 label-focused-foreground = ${colors.foreground}
-label-focused-padding = 2
 
+label-urgent-padding = 2
 label-urgent-background = ${colors.alert}
 label-urgent-foreground = ${colors.foreground}
-label-urgent-padding = 2
 
+label-occupied-padding = 2
 label-occupied-background = ${colors.background}
 label-occupied-foreground = ${colors.inactive-text}
-label-occupied-padding = 2
 
 format = <label-state> <label-mode>
 
 [module/time]
 type = internal/date
+
 interval = 40
 label = %time%
 time = %H:%M
 format-padding = 2
-format-background = ${colors.accent}
+format-background = ${colors.background}
+format-margin = 1
 
 [module/date]
 type = internal/date
@@ -65,27 +68,60 @@ interval = 1200
 label = %date%
 date = %A, %d %B
 format-padding = 2
-format-background = ${colors.background}
+format-background = ${colors.accent}
 
 [module/volume]
 type = internal/pulseaudio
-label-volume = vol %percentage%%
-label-muted = vol [x]
+
 enable-click = false
-format-volume-padding = 2
-format-muted-padding = 2
-format-volume-background = ${colors.accent}
-format-volume-foreground = ${colors.foreground}
-format-muted-background = ${colors.accent}
-format-muted-foreground = ${colors.foreground}
-format-volume-margin = 0
 use-ui-max = false
 
+format-volume = <ramp-volume> <label-volume>
+label-volume = %percentage%%
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+format-volume-padding = 2
+format-volume-background = ${colors.background}
+format-volume-foreground = ${colors.foreground}
+
+format-muted = <label-muted>
+label-muted =  muted
+format-muted-padding = 2
+format-muted-background = ${colors.background}
+format-muted-foreground = ${colors.foreground}
+
+format-volume-margin = 1
+
 [module/battery]
-type = custom/script
-exec = python3 ~/etc/polybar/scripts/battery.py
-format-padding = 2
-format-background = ${colors.accent}
+type = internal/battery
+
+full-at = 99
+battery = BAT0
+adapter = AC
+poll-interval = 5
+
+time-format = %H:%M
+
+format-charging = <label-charging>
+label-charging =  %percentage%%
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+format-charging-padding = 2
+format-charging-background = ${colors.accent}
+
+format-discharging = <label-discharging> <ramp-capacity>
+label-discharging = (%consumption% W - %time%) %percentage%%
+format-discharging-padding = 2
+format-discharging-background = ${colors.accent}
+
+format-full = <label-full>
+label-full =  %percentage%%
+format-full-padding = 2
+format-full-background = ${colors.accent}
 
 [module/title]
 type = internal/xwindow
