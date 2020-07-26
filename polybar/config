@@ -113,8 +113,8 @@ ramp-capacity-4 = 
 format-charging-padding = 2
 format-charging-background = ${colors.accent}
 
-format-discharging = <label-discharging> <ramp-capacity>
-label-discharging = (%consumption% W - %time%) %percentage%%
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = %percentage%% (%consumption% W)
 format-discharging-padding = 2
 format-discharging-background = ${colors.accent}
 
