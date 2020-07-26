@@ -92,6 +92,7 @@ format-muted-background = ${colors.background}
 format-muted-foreground = ${colors.foreground}
 
 format-volume-margin = 1
+format-muted-margin = 1
 
 [module/battery]
 type = internal/battery
@@ -122,6 +123,10 @@ format-full = <label-full>
 label-full =  %percentage%%
 format-full-padding = 2
 format-full-background = ${colors.accent}
+
+format-full-margin = 1
+format-discharging-margin = 1
+format-charging-margin = 1
 
 [module/title]
 type = internal/xwindow
