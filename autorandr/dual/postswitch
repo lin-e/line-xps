@@ -1,0 +1,8 @@
+#!/bin/sh
+bspc monitor DP-1 -d 1 2 3 4 5
+bspc monitor DP-2 -d 6 7 8 9 10
+bspc monitor eDP-1 -d 11 12
+
+~/etc/polybar/launch.sh
+
+feh --no-fehbg --bg-fill ~/etc/static/img/bg.png --bg-fill ~/etc/static/img/bg.png --bg-fill ~/etc/static/img/bg.png &
