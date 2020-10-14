@@ -2,6 +2,7 @@
 
 BACKGROUND=~/etc/static/img/bg.png
 
+wmname LG3D &
 sxhkd &
 xsetroot -cursor_name left_ptr &
 setxkbmap -option ctrl:nocaps # caps -> ctrl
