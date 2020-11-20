@@ -25,3 +25,5 @@ bspc config gapless_monocle            true
 bspc config focus_follows_pointer      true
 bspc config pointer_modifier            mod1
 bspc config presel_feedback_color      \#0099FF
+
+autorandr --change
