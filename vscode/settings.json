@@ -96,5 +96,8 @@
     },
     "metals.javaHome": "/usr/lib/jvm/default-java",
     "editor.cursorSmoothCaretAnimation": true,
+    "latex-workshop.intellisense.unimathsymbols.enabled": true,
+    "latex-workshop.view.pdf.zoom": "page-width",
+    "workbench.statusBar.visible": true,
 }
 
