@@ -8,4 +8,4 @@ aka dotfiles
  - **Terminal**: termite
  - **Launcher**: rofi
  - **rEFInd**: rEFInd-minimal-dark
- - **Compositor**: compton-tyrone
+ - **Compositor**: compton-tryone

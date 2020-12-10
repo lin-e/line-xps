@@ -12,7 +12,7 @@
     lightbg:                     rgba ( 238, 232, 213, 100 % );
     selected-active-foreground:  rgba ( 0, 142, 212, 100 % );
     alternate-active-background: rgba ( 27, 27, 27, 100 % );
-    background:                  rgba ( 10, 10, 10, 80 % );
+    background:                  rgba ( 10, 10, 10, 70 % );
     bordercolor:                 rgba ( 27, 27, 27, 100 % );
     alternate-normal-foreground: @foreground;
     normal-background:           rgba ( 27, 27, 27, 70 % );
@@ -103,6 +103,9 @@
 #sidebar {
     border:       2px dash 0px 0px ;
     border-color: @separatorcolor;
+}
+#button {
+    text-color: @selected-normal-foreground;
 }
 #button.selected {
     background-color: @selected-normal-background;
