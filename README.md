@@ -5,7 +5,7 @@ aka dotfiles
  - **Shell**: zsh (powerlevel10k)
  - **WM**: ~~i3-gaps~~ bspwm
  - **Bar**: polybar
- - **Terminal**: termite
+ - **Terminal**: ~~termite~~ urxvt
  - **Launcher**: rofi
  - **rEFInd**: rEFInd-minimal-dark
  - **Compositor**: compton-tryone

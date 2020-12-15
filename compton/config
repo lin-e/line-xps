@@ -8,5 +8,5 @@ blur-strength = 7;
 backend = "glx";
 detect-client-opacity = true;
 blur-background-exclude = [
-  "!(class_i = 'termite' || class_i = 'rofi' || class_g = 'Polybar')"
+  "!(class_i = 'termite' || class_i = 'rofi' || class_g = 'Polybar' || class_i = 'urxvt')"
 ];

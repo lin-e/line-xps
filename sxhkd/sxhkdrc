@@ -1,6 +1,6 @@
 # open terminal
 alt + Return
-	termite
+	urxvt
 
 alt + {o,p}
   desk=`bspc query -D -d focused`; \
