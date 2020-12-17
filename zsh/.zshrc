@@ -24,6 +24,9 @@ source /etc/zsh_command_not_found
 
 eval $(thefuck --alias)
 
+if [ -f ~/etc/zsh/.funcs ]; then
+    . ~/etc/zsh/.funcs
+fi
 if [ -f ~/etc/zsh/.aliases ]; then
     . ~/etc/zsh/.aliases
 fi

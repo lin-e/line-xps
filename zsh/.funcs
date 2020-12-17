@@ -1,0 +1,1 @@
+pdf() { evince $1 &> /dev/null & disown }
