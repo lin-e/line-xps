@@ -1,5 +1,5 @@
 configuration {
-	modi: "window,drun,ssh";
+	modi: "window,drun,ssh,power:~/etc/rofi/scripts/rofi-power-menu";
 	show-icons: true;
 	terminal: "urxvt";
 	ssh-command: "{terminal} -e sh -c \"{ssh-client} {host} [-p {port}]\"";
