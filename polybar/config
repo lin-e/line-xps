@@ -133,4 +133,4 @@ type = internal/xwindow
 format-padding = 2
 format-margin = 2
 format-background = ${colors.background}
-label-maxlen=200
+label-maxlen=150
