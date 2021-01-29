@@ -10,6 +10,7 @@ xcape -e 'Shift_R=Shift_L|0;Shift_L=Shift_L|9' -t 300 # space cadet shift
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10 11 12
 ~/etc/polybar/launch.sh
+python3 ~/etc/scripts/pulse.py
 
 compton --config ~/etc/compton/config &
 feh --no-fehbg --bg-fill $BACKGROUND --bg-fill $BACKGROUND &
