@@ -1,0 +1,12 @@
+swipe:
+  3:
+    left:
+      command: 'xdotool key alt+Shift+Tab'
+    right:
+      command: 'xdotool key alt+Tab'
+
+threshold:
+  swipe: 0.4
+
+interval:
+  swipe: 0.8
