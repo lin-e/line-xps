@@ -4,6 +4,7 @@ BACKGROUND=~/etc/static/img/bg.png
 
 wmname LG3D &
 sxhkd &
+fusuma &
 xsetroot -cursor_name left_ptr &
 setxkbmap -option ctrl:nocaps # caps -> ctrl
 xcape -e 'Shift_R=Shift_L|0;Shift_L=Shift_L|9' -t 300 # space cadet shift
