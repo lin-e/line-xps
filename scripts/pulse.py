@@ -3,12 +3,14 @@ pulse = pulsectl.Pulse('pulsepy')
 
 preferred_output = [
     "CalDigit Thunderbolt 3 Audio Analogue Stereo",
+    "CalDigit USB-C HDMI Audio Analogue Stereo",
     "Built-in Audio Analogue Stereo"
 ]
 
 preferred_input = [
     "RØDE VideoMic NTG Analogue Stereo",
     "CalDigit Thunderbolt 3 Audio Analogue Stereo",
+    "Logitech StreamCam Analogue Stereo",
     "Built-in Audio Analogue Stereo"
 ]
 
@@ -20,6 +22,8 @@ for sink in pulse.sink_list():
 
 for source in pulse.source_list():
     inputs[source.description] = source
+
+print(pulse.sink_list())
 
 for s in preferred_output:
     if s in outputs:
