@@ -50,7 +50,10 @@ def generate_bspc(monitor, mapping):
     return f'bspc monitor {mapping[monitor["name"]]} -d {" ".join(monitor["workspaces"])}'
 
 def match(rule, xrandr):
-    return rule["resolution"] == xrandr["resolution"] and rule["refresh_rate"] in xrandr["refresh_rates"]
+    prefix_check = True
+    if "prefix" in rule:
+        prefix_check = xrandr["name"].startswith(rule["prefix"])
+    return rule["resolution"] == xrandr["resolution"] and rule["refresh_rate"] in xrandr["refresh_rates"] and prefix_check
 
 def try_match(monitors, available):
     used = []
@@ -100,7 +103,8 @@ rules = [
                 "primary": False,
                 "enabled": False,
                 "workspaces": [],
-                "positioning": []
+                "positioning": [],
+                "prefix": "eDP"
             },
         ]
     },
@@ -123,7 +127,35 @@ rules = [
                 "primary": False,
                 "enabled": False,
                 "workspaces": [],
-                "positioning": []
+                "positioning": [],
+                "prefix": "eDP"
+            },
+        ]
+    },
+    {
+        "name": "Random HP Monitor in Labs",
+        "monitors": [
+            {
+                "name": "internal",
+                "resolution": "1920x1200",
+                "refresh_rate": "59.95",
+                "primary": True,
+                "enabled": True,
+                "workspaces": list(map(str, range(1, 7))),
+                "positioning": [],
+                "prefix": "eDP"
+            },
+            {
+                "name": "e243i",
+                "resolution": "1920x1200",
+                "refresh_rate": "59.95",
+                "primary": True,
+                "enabled": True,
+                "workspaces": list(map(str, range(7, 13))),
+                "positioning": [
+                    ("above", "internal")
+                ],
+                "prefix": "DP"
             },
         ]
     },
@@ -137,7 +169,8 @@ rules = [
                 "primary": True,
                 "enabled": True,
                 "workspaces": list(map(str, range(1, 13))),
-                "positioning": []
+                "positioning": [],
+                "prefix": "eDP"
             },
         ]
     }
